@@ -141,6 +141,7 @@ a {
     width: 95%;
     height:65vh;
     margin: auto;
+    flex-wrap: wrap-reverse;
     overflow:hidden;
     backdrop-filter: blur(5px);
     border-radius: 2rem;
@@ -191,7 +192,7 @@ a {
     align-items: center;
     flex-direction:column;
     padding: 4vh 0;
-/*    background-image: url('assets/techwires.png');*/
+    background-image: url('assets/techwires.png');
 }
 
 .homeSection2ndPanel h1{
@@ -225,7 +226,7 @@ a {
     opacity: 1;
 }
 .homeSectionMainDataDiv{
-    width: 60%;
+    min-width: 60%;
     height:fit-content;
     display: flex;
     flex-direction: column;
@@ -259,7 +260,7 @@ a {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Adjust based on the image width */
+    transform: translateX(-100%); 
   }
 }
 
@@ -268,9 +269,13 @@ a {
 }
 
 .aboutSection h1{
-	font-size:2rem;
-	font-weight:bold;
-	text-align:center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    rotate: -2deg;
+    margin-left: -1rem;
+    width: 101%;
+    margin-bottom: 2rem;
 }
 
 .blackBannerLong{
@@ -331,3 +336,88 @@ a {
       top: 0;
     }
   }
+
+.highlightSection{
+	display:flex;
+	height:fit-content;
+	justify-content:space-around;
+	align-items:center;
+	flex-wrap:wrap;
+	padding:5vh 0;
+}
+
+.highlightSectionItem{
+    width: 28%;
+    background-color: rgba(255,255,255,0.1);
+    height: 90%;
+    rotate: -2deg;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 1rem #00000029;
+    align-items: center;
+}
+.highlightSectionItem h1{
+    text-shadow: 0 0 1rem #ffffffa3;
+    font-weight: bold;
+    font-family: 'Silkscreen';
+    text-align: center;
+    width:80%;
+}
+
+.highlightSectionItem p{
+    font-family: 'sora';
+    text-align: center;
+    width:80%;
+}
+
+.highlightSectionItem .feather {
+    width: 5rem;
+    height: 5rem;
+    stroke: currentColor;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+@keyframes spin{
+	0%, 100%{
+		rotate:0deg;
+	}
+	50%{
+		rotate: 360deg;
+	}
+}
+
+.showMobileView{
+	display:flex;
+}
+
+@media (max-width:960px){
+.homeSection{
+	height: fit-content;
+	width:93%;
+	text-align: center !IMPORTANT;
+}
+.logoContainer{
+	width:96%;
+}
+.homeSection2ndPanel,.navbarItem{
+	display:none;
+}
+.homeSectionButton{
+	margin:2vh auto;
+}
+.hideMobileView{
+	display:none;
+}
+
+.highlightSectionItem{
+    min-width: 100%;
+    rotate: -2deg;
+    backdrop-filter: blur(1px);
+    margin-bottom: 1rem;
+}
+}

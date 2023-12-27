@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web3xAI</title>
 	<link rel="stylesheet" type="text/css" href="./styles.css">
-	<!-- Lottie CDN -->	
+   <!-- Icon Library (OpenSource - Feather) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body>
 
@@ -15,20 +17,20 @@
 	<h2 class='textGradient' style='font-size: 2rem;font-weight:bold'>Web3xAI</h2>
 	<div class="navbarItem">
 		<div class='navbarItemGlowFix'>-</div>
-		<h3>Home</h3>
+		<a href="#HomeSection"><h3>Home</h3></a>
 		<div class='navbarItemGlow navbarItemGlow_ACTIVE'>-</div>
 	</div>
 
 	<div class="navbarItem">
 		<div class='navbarItemGlowFix'>-</div>
-		<h3>About</h3>
+		<a href="#AboutSection"><h3>About</h3></a>
 		<div class='navbarItemGlow'>-</div>
 	</div>
 
 
 	<div class="navbarItem">
 		<div class='navbarItemGlowFix'>-</div>
-		<h3>Features</h3>
+		<a href="#HighlightSection"><h3>Highlights</h3></a>
 		<div class='navbarItemGlow'>-</div>
 	</div>
 
@@ -49,7 +51,7 @@
 
 
 <!-- HOME SECTION -->
-<div class="homeSection">
+<div id="HomeSection" class="homeSection">
 	<div class="homeSectionMainDataDiv">
 		<h1 class="textGradient">Web3XAI Summer 2023</h1>
 		<h2>
@@ -75,29 +77,69 @@
 </div>
 
 <!-- ABOUT SECTION -->
-<div class='aboutSection'>
+<div id='AboutSection' class='aboutSection'>
 	<h1 class="blackBannerLong">✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event ✽ about the event</h1>
 </div>
 
 <div style="position:relative;display: flex; justify-content: space-around; padding: 4%; width: 92%;">
-	<img style='position: absolute; left: 0; z-index: -1; mix-blend-mode: overlay;' src="assets/Shapestar.svg" />
-	<img style='position: absolute;bottom:0; right: 0; z-index: -1; mix-blend-mode: overlay;' src="assets/Shapestar.svg" />
+	<img style='animation:100s spin infinite;position: absolute; left: 0; z-index: -1; mix-blend-mode: overlay;' src="assets/Shapestar.svg" />
+	<img style='animation:100s spin infinite;position: absolute;bottom:0; right: 0; z-index: -1; mix-blend-mode: overlay;' src="assets/Shapestar.svg" />
 
-	<div style='width:40%; position: relative;'>
+	<div class='hideMobileView' style='width:40%; position: relative;'>
 		<img  src='assets/podcastpreview.png' style='width:100%;position:absolute;object-fit:contain' />
 		<img  src='assets/podcastabove.gif' style='width: 82%; border-radius: 1rem; position: absolute; object-fit: contain; box-shadow: 0 0 2rem black;' />
 
 	</div>
-	<div style="width:40%;">
+	<div style="width: 40%; flex: 1; padding: 0 5%;">
 	<div style="width: 100%; color: transparent; mix-blend-mode: color-dodge; border-radius: 1rem; height: 0.5rem; background: linear-gradient(45deg, #ff22e0, #7407ff 2%,#ff22e0);">-</div>
 	<p style='font-size:1.2rem;color: #dec2de; text-align: center; font-family: sora; font-weight: bold;' class='textGradient'>
 		<span class='spanText'>WebxAI</span> Summer 2023, a global event spanning three weekends, brought together over <span class='spanText'>10,000+</span> enthusiasts of Web 3.0, blockchain, and artificial intelligence. The program featured critical analyses of blockchain, funding discussions, and the convergence of <span class='spanText'>AI</span>. Through founders' talks, growth discussions, and deep dives into <span class='spanText'>Web 3.0</span>, the event facilitated the integration of knowledge and creativity among professionals. The speaker lineup included CEOs and founders from leading companies like Rariko, StackOS, Foundership, Web 3 Accelerator, Zomato, and host Anurag Manik, creating a dynamic synergy between the cutting-edge realms of Web 3.0 and artificial intelligence.
 	</p>		
 	</div>
 </div>
+
+<!-- HIGHLIGHT SECTION -->
+<div id='HighlightSection' class='aboutSection'>
+	<h1 class="blackBannerLong">✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights ✽ conference highlights</h1>
+</div>
+
+<div class="highlightSection" style='position:relative' >
+	<div class="highlightSectionItem">
+		<h1>Synergistic Discussions</h1>
+		<i data-feather="message-circle"></i>
+		<p>
+			Engaging panels with thought leaders like Santosh Panda, Mani Kumar, and Vishnu Korde, discussing the intersection of AI and Web 3.0, its growth and global development.
+		</p>
+	</div>
+	<div class="highlightSectionItem">
+		<h1>Interactive 99U Talk</h1>
+		<i data-feather="users"></i>
+		<p>
+			Unnati Chhabra, Software Engineer at Zomato had an explanatory talk about the status and skilling up in the Web 3.0 industry.
+		</p>
+	</div>
+	<div class="highlightSectionItem">
+		<h1>Ignite Session</h1>
+		<i data-feather="heart"></i>
+		<p>
+			Dewashri Kulwal talked about the view of social media X, in Web 3.0. Covered a major aspect of being a marketeer in the Web 3.0 space and the perspective of a marketeer and the inside out the scenario. 
+
+		</p>
+	</div>
+	<img style='animation:100s spin infinite; position: absolute; left: 0; z-index: -1; mix-blend-mode: overlay;rotate:80deg' src="assets/shapecurve.svg" />
+	<img style='animation:100s spin infinite;position: absolute;bottom:0; right: 20%; z-index: -1; mix-blend-mode: overlay;' src="assets/shapecurve.svg" />
+
+</div>
+
+<div style="background:black;height:5rem;display:flex;">
+	<p style="margin:auto;color:grey">Web3XAI Summer 2023 ©</p>
+</div>
 <!-- CDN Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
 <script src="script.js"></script>
+<script type="text/javascript">
+	feather.replace()
+</script>
 
 </body>
 </html>
