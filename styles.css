@@ -430,4 +430,9 @@ body{
 	background: linear-gradient(45deg,#9C27B0, #bd06cd);
 }
 
+.aboutSection h1{
+    margin-left: 0rem;
+    font-size:1rem;
+}
+
 }
