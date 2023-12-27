@@ -400,6 +400,7 @@ a {
 	height: fit-content;
 	width:93%;
 	text-align: center !IMPORTANT;
+    backdrop-filter: blur(0px);
 }
 .logoContainer{
 	width:96%;
@@ -417,7 +418,7 @@ a {
 .highlightSectionItem{
     min-width: 100%;
     rotate: -2deg;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0px);
     margin-bottom: 1rem;
 }
 .textGradient{
@@ -433,6 +434,10 @@ body{
 .aboutSection h1{
     margin-left: 0rem;
     font-size:1rem;
+}
+.navbar{
+    background:black;
+    backdrop-filter:blur(0rem);
 }
 
 }
