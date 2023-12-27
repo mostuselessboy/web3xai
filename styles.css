@@ -426,4 +426,9 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+body{
+	background-image: url('backgrounds/mobile_bg.png');
+}
+
+
 }
