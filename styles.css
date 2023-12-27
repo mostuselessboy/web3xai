@@ -428,7 +428,8 @@ a {
 }
 
 body{
-	background: linear-gradient(45deg,#9C27B0, #bd06cd);
+/*	background: linear-gradient(45deg,#9C27B0, #bd06cd);*/
+background:#9C27B0;
 }
 
 .aboutSection h1{
