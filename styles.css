@@ -427,8 +427,7 @@ a {
 }
 
 body{
-	background-image: url('backgrounds/mobile_bg.png');
+	background: linear-gradient(45deg,#9C27B0, #bd06cd);
 }
-
 
 }
