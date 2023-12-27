@@ -425,6 +425,7 @@ a {
 	 background:linear-gradient(45deg, #d2d2d2, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow:none;
 }
 
 body{
