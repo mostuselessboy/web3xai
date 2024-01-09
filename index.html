@@ -5,12 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web3xAI</title>
 	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="icon" type="image" href="assets/favicon.png">
    <!-- Icon Library (OpenSource - Feather) -->
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
+<img src="backgrounds/bg14.png" style='object-fit:cover;position:fixed;height:100vh;width:100vw;z-index:-1;top: 0;'>
 <body>
-
 
 <!-- NAVBAR -->
 <div class="navbar">
@@ -18,20 +19,20 @@
 	<div class="navbarItem">
 		<div class='navbarItemGlowFix'>-</div>
 		<a href="#HomeSection"><h3>Home</h3></a>
-		<div class='navbarItemGlow navbarItemGlow_ACTIVE'>-</div>
+		<div id="HomeSectionGlow" class='navbarItemGlow navbarItemGlow_ACTIVE'>-</div>
 	</div>
 
 	<div class="navbarItem">
 		<div class='navbarItemGlowFix'>-</div>
 		<a href="#AboutSection"><h3>About</h3></a>
-		<div class='navbarItemGlow'>-</div>
+		<div id="AboutSectionGlow" class='navbarItemGlow'>-</div>
 	</div>
 
 
 	<div class="navbarItem">
 		<div class='navbarItemGlowFix'>-</div>
 		<a href="#HighlightSection"><h3>Highlights</h3></a>
-		<div class='navbarItemGlow'>-</div>
+		<div id="HighlightSectionGlow" class='navbarItemGlow'>-</div>
 	</div>
 
 	<div class="navbarItem">
@@ -140,6 +141,41 @@
 <script type="text/javascript">
 	feather.replace()
 </script>
+<script>
+function extractSectionIdsAndObserve() {
+    const anchorElements = document.querySelectorAll('.navbar a');
+    const sectionIds = [];
+    anchorElements.forEach(anchor => {
+        const sectionId = anchor.getAttribute('href').substring(1);
+        sectionIds.push(sectionId);
+    });
 
+    anchorElements.forEach(anchor => {
+        const sectionId = anchor.getAttribute('href').substring(1);
+        console.log(sectionId);
+        const sectionElement = document.getElementById(sectionId);
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sectionIds.forEach(sectionID => {
+                        document.getElementById(`${sectionID}Glow`).classList.remove('navbarItemGlow_ACTIVE');
+                    });
+                    document.getElementById(`${sectionId}Glow`).classList.add('navbarItemGlow_ACTIVE');
+                    console.log(`Section ${sectionId} is in view`);
+                }
+            });
+        }, {
+            rootMargin: "-20% 0px", // Add a negative top margin of 20vh
+        });
+
+        observer.observe(sectionElement);
+    });
+}
+
+extractSectionIdsAndObserve();
+
+
+
+</script>
 </body>
 </html>
