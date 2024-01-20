@@ -462,5 +462,10 @@ background:#9C27B0;
     background:black;
     backdrop-filter:blur(0rem);
 }
+.EventSectionItem img{
+    width: 90%;
+
+}
+
 
 }
